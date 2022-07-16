@@ -1,0 +1,161 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>A sequence-to-sequence voice conversion based two-stage method for Japanese electrolaryngeal speech enhancement</title>
+    <link rel="stylesheet" type="text/css" href="../../stylesheet.css"/>
+    <link rel="shortcut icon" href="../../imgs/talk.png">
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1>Two-stage training method for Japanese electrolaryngeal speech enhancement based on sequence-to-sequence voice conversion</h1>
+      </header>
+    </article>
+    
+    <!--<div><b>Authors:</b> Ding Ma, Lester Phillip Violeta, Kazuhiro Kobayashi, Tomoki Toda</div>--> 
+    <div><b>Status:</b> Submitted to SLT 2022. </div>
+
+    <br>
+
+    <div style="width: 80%">
+      <b>Abstract:</b> Sequence-to-sequence (seq2seq) models have impressive performance in voice conversion (VC) in terms of naturalness and intelligibility, when it comes to, for example, converting prosody, handling the suparasegmental F0 contours and determining different phoneme duration. Consequently, they could have potentials in converting electrolaryngeal speech to normal speech (EL2SP). However, seq2seq VC models suffer a significant performance degradation when the training data is insufficient. To address this issue, we suggest a novel, two-stage strategy to optimize the performance on seq2seq based EL2SP VC within a small size of original dataset. We first combine a large amount of synthetic parallel data (SPD), which is generated from the corresponding EL Text-to-speech (TTS) and Normal speech TTS models, with original dataset into VC training. Then, an adaptation training stage is further conducted with original dataset only. The experimental results show the method progressively improves the seq2seq based EL2SP VC performance.
+    </div>
+
+    <div>
+      <h2>Proposed method</h2>
+      <img src="imgs/SLT_figure1_2.png" style="width: 50%;"/>
+    </div>
+
+    <div style="width: 80%">
+      <h2>Dataset</h2>
+      Two Datasets are recorded: RealEL, which is EL corpus recorded from a laryngectomee; SimuEL and Normal, which are simulated EL corpus and normal corpus recorded from a healthy speaker.<br><br>
+    </div>
+    
+    <div style="width: 80%">
+      <h2>Two EL2SP-experimental cases</h2>
+      <ul>
+        <li><strong>Case 1</strong>: SimuEL to Normal.</li>
+        <li><strong>Case 2</strong>: RealEL to Normal.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>Subjective results</h2>
+      <img src="imgs/MOS_case1andcase2_new1.png" style="width: 30%;"/>
+    </div>
+
+    <div style="width: 80%">
+        <h2>Speech Samples of Case 1</h2>
+
+        <!-- sample 1 -->
+        <h3 class="transcript">Transcription: 二百円の牛乳を何本か買ったから、六百円か、八百円だったわ。 (nihyakuen no gyuunyuu wo nanbon ka katta kara、roppyakuen ka、happyakuen dattawa。)</h3>
+        <br>
+        <table>
+            <tr style="border-top: solid; border-bottom: solid;">
+              <th>EL speech</th><th>Baseline system</th><th>Stage I of proposed method</th><th>Stage II of proposed method</th><th>Normal speech</th>
+            </tr>
+            <tr style="border-top: solid; border-bottom: solid;">
+              <td>
+                <audio controls><source src="samples/case1/el/tfa091.wav"></audio>
+              </td>
+              <td>
+                <audio controls><source src="samples/case1/baseline/tfa091.wav"></audio>
+              </td>
+              <td>
+                <audio controls><source src="samples/case1/s1/tfa091.wav"></audio>
+              </td>
+              <td>
+                <audio controls><source src="samples/case1/s2/tfa091.wav"></audio>
+              </td>
+              <td>
+                <audio controls><source src="samples/case1/normal/tfa091.wav"></audio>
+              </td>
+            </tr>
+        </table>
+
+        <!-- sample 2 -->
+        <h3 class="transcript">Transcription: ンジャメナ、んちゃって、言いにくいな。 (njyamena、ncyatte、iinikuina。)</h3>
+        <br>
+        <table>
+            <tr style="border-top: solid; border-bottom: solid;">
+              <th>EL speech</th><th>Baseline system</th><th>Stage I of proposed method</th><th>Stage II of proposed method</th><th>Normal speech</th>
+            </tr>
+            <tr style="border-top: solid; border-bottom: solid;">
+              <td>
+                <audio controls><source src="samples/case1/el/tfa104.wav"></audio>
+              </td>
+              <td>
+                <audio controls><source src="samples/case1/baseline/tfa104.wav"></audio>
+              </td>
+              <td>
+                <audio controls><source src="samples/case1/s1/tfa104.wav"></audio>
+              </td>
+              <td>
+                <audio controls><source src="samples/case1/s2/tfa104.wav"></audio>
+              </td>
+              <td>
+                <audio controls><source src="samples/case1/normal/tfa104.wav"></audio>
+              </td>
+            </tr>
+        </table>
+      </div>
+
+      <div style="width: 80%">
+        <h2>Speech Samples of Case 2</h2>
+        <!-- sample 3 -->
+        <h3 class="transcript">Transcription: お待たせしました。 (o ma tase shi mashi ta。)</h3>
+        <br>
+        <table>
+            <tr style="border-top: solid; border-bottom: solid;">
+              <th>EL speech</th><th>Baseline system</th><th>Stage I of proposed method</th><th>Stage II of proposed method</th><th>Normal speech</th>
+            </tr>
+            <tr style="border-top: solid; border-bottom: solid;">
+              <td>
+                <audio controls><source src="samples/case2/el/ASA106.wav"></audio>
+              </td>
+              <td>
+                <audio controls><source src="samples/case2/baseline/ASA106.wav"></audio>
+              </td>
+              <td>
+                <audio controls><source src="samples/case2/s1/ASA106.wav"></audio>
+              </td>
+              <td>
+                <audio controls><source src="samples/case2/s2/ASA106.wav"></audio>
+              </td>
+              <td>
+                <audio controls><source src="samples/case2/normal/ASA106.wav"></audio>
+              </td>
+            </tr>
+        </table>
+        <!-- sample 4 -->
+        <h3 class="transcript">Transcription: 空いているあちらの席に移りたいのですが。 (a i te iru achira no seki ni utsu ri tai no desu ga。)</h3>
+        <br>
+        <table>
+            <tr style="border-top: solid; border-bottom: solid;">
+              <th>EL speech</th><th>Baseline system</th><th>Stage I of proposed method</th><th>Stage II of proposed method</th><th>Normal speech</th>
+            </tr>
+            <tr style="border-top: solid; border-bottom: solid;">
+              <td>
+                <audio controls><source src="samples/case2/el/ASA204.wav"></audio>
+              </td>
+              <td>
+                <audio controls><source src="samples/case2/baseline/ASA204.wav"></audio>
+              </td>
+              <td>
+                <audio controls><source src="samples/case2/s1/ASA204.wav"></audio>
+              </td>
+              <td>
+                <audio controls><source src="samples/case2/s2/ASA204.wav"></audio>
+              </td>
+              <td>
+                <audio controls><source src="samples/case2/normal/ASA204.wav"></audio>
+              </td>
+            </tr>
+        </table>
+
+      </div>
+
+  <br>
+  <div><a href="../../index.html">[Back to top]</a> </div>
+  </body>
+</html>
