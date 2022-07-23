@@ -6,24 +6,13 @@
     <link rel="shortcut icon" href="../../imgs/talk.png">
   </head>
   <body>
-    <article>
-      <header>
-        <h1>Two-stage training method for Japanese electrolaryngeal speech enhancement based on sequence-to-sequence voice conversion</h1>
-      </header>
-    </article>
+
     
     <div><b>Status:</b> Submitted to SLT 2022. </div>
 
     <br>
 
-    <div style="width: 80%">
-      <b>Abstract:</b> Sequence-to-sequence (seq2seq) voice conversion (VC) models have greater potentials in converting electrolaryngeal (EL) speech to normal speech (EL2SP) compared to conventional VC models. However, EL2SP based on seq2seq VC needs a sufficiently large amount of parallel data for the model training and it suffers from significant performance degradation when the amount of training data is insufficient. To address this issue, we suggest a novel, two-stage strategy to optimize the performance on EL2SP based on seq2seq VC when a small amount of the parallel dataset is available. In contrast to utilizing high-quality data augmentations in previous studies, we first combine a large amount of imperfect synthetic parallel data of EL and normal speech, with the original dataset into VC training. Then, a second stage training is conducted with the original parallel dataset only. The results show that the proposed method progressively improves the performance of EL2SP based on seq2seq VC. 
-    </div>
-
-    <div>
-      <h2>Proposed method</h2>
-      <img src="imgs/SLT_Figrue_withoutbaseline.png" style="width: 50%;"/>
-    </div>
+  
 
     <div style="width: 80%">
       <h2>Dataset</h2>
@@ -36,11 +25,6 @@
         <li><strong>Case 1</strong>: SimuEL to NormSP.</li>
         <li><strong>Case 2</strong>: RealEL to NormSP.</li>
       </ul>
-    </div>
-
-    <div>
-      <h2>Subjective results</h2>
-      <img src="imgs/MOS_case1_case2_fordemo.png" style="width: 30%;"/>
     </div>
 
     <div style="width: 80%">
@@ -155,6 +139,5 @@
       </div>
 
   <br>
-  <div><a href="../../index.html">[Back to top]</a> </div>
   </body>
 </html>
