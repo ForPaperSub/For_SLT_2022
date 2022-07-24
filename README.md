@@ -1,1 +1,1 @@
-# EL2SP-demos
+# Demos
